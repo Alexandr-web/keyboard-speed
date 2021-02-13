@@ -1,0 +1,119 @@
+@import '../../node_modules/normalize.css/normalize';
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #0E0E0E;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 10px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.wrapper {
+  padding: 50px 0 0 0;
+  &__keyboard {
+    height: 300px;
+    &-list {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 10px;
+      &-item {
+        background: #302F37;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        font-size: 19px;
+        align-items: center;
+        transition: .3s;
+        &:nth-child(11) {
+          grid-column-start: 13;
+          grid-column-end: 11;
+          grid-row-start: 1;
+          background: #1D1C21;
+        }
+        &:nth-child(22) {
+          grid-column-start: 11;
+          grid-column-end: 13;  
+          background: #1D1C21;    
+        }
+        &:nth-child(23) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          background: #1D1C21;
+        }
+        &:nth-child(34) {
+          grid-row-start: 4;
+          grid-column-start: 5;
+          grid-column-end: 9;
+          background: #1D1C21;
+        }
+      }
+    }
+  }
+  &__text {
+    padding: 25px 0;
+    &-par {
+      background: #fff;
+      padding: 15px;
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: .5px;
+      transition: .4s;
+      border-radius: 3px;
+    }
+  }
+}
+
+.active-key {
+  background: #64FF8B !important;
+}
+
+.valid-letter {
+  background: #64FF8B;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  transition: .4s;
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.invalid-letter {
+  background: #E33A3A;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  transition: .4s;
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.done-text {
+  background: #64FF8B;
+  color: #fff;
+}
