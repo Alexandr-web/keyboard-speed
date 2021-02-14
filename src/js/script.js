@@ -26,52 +26,54 @@ const keyboardStart = () => {
     let upperCase = false;
 
     window.addEventListener('keydown', e => {
-      e.preventDefault();
+      if (print) {
+        e.preventDefault();
 
-      keys_blocks.forEach(key => {
-        const code = parseInt(key.dataset.code);
-        
-        keys.push(e.keyCode);
-        checkKeys();
-
-        if (keys.length > 1) {
-          for (let i = 0; i < keys.length; i++) {
-            for (let j = i + 1; j < keys.length; j++) {
-              if (keys[i] === 191 && keys[j] === 16 || keys[i] === 16 && keys[j] === 191) {
-                checkLetter(',');
+        keys_blocks.forEach(key => {
+          const code = parseInt(key.dataset.code);
+          
+          keys.push(e.keyCode);
+          checkKeys();
+  
+          if (keys.length > 1) {
+            for (let i = 0; i < keys.length; i++) {
+              for (let j = i + 1; j < keys.length; j++) {
+                if (keys[i] === 191 && keys[j] === 16 || keys[i] === 16 && keys[j] === 191) {
+                  checkLetter(',');
+                }
               }
             }
           }
-        }
-
-        if (e.keyCode === code) {
-          key.classList.add('active-key');
-
-          setTimeout(() => key.classList.remove('active-key'), ms);
-          checkUpperCase();
-
-          if (key.innerText === 'CapsLock') {
-            upperCase = !upperCase;
+  
+          if (e.keyCode === code) {
+            key.classList.add('active-key');
+  
+            setTimeout(() => key.classList.remove('active-key'), ms);
             checkUpperCase();
+  
+            if (key.innerText === 'CapsLock') {
+              upperCase = !upperCase;
+              checkUpperCase();
+            }
           }
-        }
-
-        function checkUpperCase() {
-          if (![13, 8, 20, 32].includes(code)) {
-            checkLetter(upperCase ? key.innerText.toUpperCase() : key.innerText);
+  
+          function checkUpperCase() {
+            if (![13, 8, 20, 32].includes(code)) {
+              checkLetter(upperCase ? key.innerText.toUpperCase() : key.innerText);
+            }
+  
+            if (code === 32) {
+              checkLetter(' ');
+            }
           }
-
-          if (code === 32) {
-            checkLetter(' ');
+  
+          function checkKeys() {
+            if (keys.length > 2) {
+              keys = keys.splice(keys.length, 1);
+            }
           }
-        }
-
-        function checkKeys() {
-          if (keys.length > 2) {
-            keys = keys.splice(keys.length, 1);
-          }
-        }
-      });
+        }); 
+      }
     });
   } 
 
@@ -159,6 +161,8 @@ const keyboardStart = () => {
     const btn_repeat = document.querySelector('.wrapper__text-btn-repeat');
 
     btn.addEventListener('click', () => {
+      print = true;
+      
       par.innerHTML = '';
       par.classList.remove('done-text');
 
@@ -178,6 +182,8 @@ const keyboardStart = () => {
     const btn_repeat = document.querySelector('.wrapper__text-btn-repeat');
 
     btn.addEventListener('click', () => {
+      print = true;
+      
       par.innerHTML = '';
       par.classList.remove('done-text');
 
