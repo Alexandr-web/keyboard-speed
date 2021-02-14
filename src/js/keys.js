@@ -1,86 +1,102 @@
 export default [
   {
-    val: 'q',
+    val: 'й',
     code: 81
   },
   {
-    val: 'w',
+    val: 'ц',
     code: 87
   },
   {
-    val: 'e',
+    val: 'у',
     code: 69
   },
   {
-    val: 'r',
+    val: 'к',
     code: 82
   },
   {
-    val: 't',
+    val: 'е',
     code: 84
   },
   {
-    val: 'y',
+    val: 'н',
     code: 89
   },
   {
-    val: 'u',
+    val: 'г',
     code: 85
   },
   {
-    val: 'i',
+    val: 'ш',
     code: 73
   },
   {
-    val: 'o',
+    val: 'щ',
     code: 79
   },
   {
-    val: 'p',
+    val: 'з',
     code: 80
+  },
+  {
+    val: 'х',
+    code: 219
+  },
+  {
+    val: 'ъ',
+    code: 221
   },
   {
     val: 'Backspace',
     code: 8
   },
   {
-    val: 'a',
+    val: 'ф',
     code: 65
   },
   {
-    val: 's',
+    val: 'ы',
     code: 83
   },
   {
-    val: 'd',
+    val: 'в',
     code: 68
   },
   {
-    val: 'f',
+    val: 'а',
     code: 70
   },
   {
-    val: 'g',
+    val: 'п',
     code: 71
   },
   {
-    val: 'h',
+    val: 'р',
     code: 72
   },
   {
-    val: 'j',
+    val: 'о',
     code: 74
   },
   {
-    val: 'k',
+    val: 'л',
     code: 75
   },
   {
-    val: 'l',
+    val: 'д',
     code: 76
   },
   {
-    val: "'",
+    val: 'ж',
+    code: 186
+  },
+  {
+    val: 'д',
+    code: 76
+  },
+  {
+    val: 'э',
     code: 222
   },
   {
@@ -92,43 +108,43 @@ export default [
     code: 20
   },
   {
-    val: 'z',
+    val: 'я',
     code: 90
   },
   {
-    val: 'x',
+    val: 'ч',
     code: 88
   },
   {
-    val: 'c',
+    val: 'с',
     code: 67
   },
   {
-    val: 'v',
+    val: 'м',
     code: 86
   },
   {
-    val: 'b',
+    val: 'и',
     code: 66
   },
   {
-    val: 'n',
+    val: 'т',
     code: 78
   },
   {
-    val: 'm',
+    val: 'ь',
     code: 77
   },
   {
-    val: ',',
+    val: 'б',
     code: 188
   },
   {
-    val: '.',
+    val: 'ю',
     code: 190
   },
   {
-    val: '?',
+    val: '.',
     code: 191
   },
   {
