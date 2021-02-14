@@ -26,6 +26,8 @@ const keyboardStart = () => {
     let upperCase = false;
 
     window.addEventListener('keydown', e => {
+      e.preventDefault();
+
       keys_blocks.forEach(key => {
         const code = parseInt(key.dataset.code);
         
@@ -151,11 +153,49 @@ const keyboardStart = () => {
 
   addNewText();
 
+  const nextText = () => {
+    const btn = document.querySelector('.wrapper__text-btn-next-text');
+    const par = document.querySelector('.wrapper__text-par');
+    const btn_repeat = document.querySelector('.wrapper__text-btn-repeat');
+
+    btn.addEventListener('click', () => {
+      par.innerHTML = '';
+      par.classList.remove('done-text');
+
+      btn_repeat.classList.add('hidden');
+
+      num_text++;
+      checkNumText();
+      setText();
+    });
+  }
+
+  nextText();
+
+  const prevText = () => {
+    const btn = document.querySelector('.wrapper__text-btn-prev-text');
+    const par = document.querySelector('.wrapper__text-par');
+    const btn_repeat = document.querySelector('.wrapper__text-btn-repeat');
+
+    btn.addEventListener('click', () => {
+      par.innerHTML = '';
+      par.classList.remove('done-text');
+
+      btn_repeat.classList.add('hidden');
+
+      num_text--;
+      checkNumText();
+      setText();
+    });
+  }
+
+  prevText();
+
   setText();
 
   function setText() {
     const par = document.querySelector('.wrapper__text-par');
-    const text = texts[num_text];
+    const text = texts[num_text].replace(/ё/g, 'е').replace(/Ё/g, 'Е');
 
     getArrayOfText(text).map(item => {
       const letter = `<span class="wrapper__text-letter">${item}</span>`;

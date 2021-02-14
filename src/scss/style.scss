@@ -54,18 +54,18 @@ img {
           grid-row-start: 1;
           background: #1D1C21;
         }
-        &:nth-child(26) {
-          grid-column-start: 13;
+        &:nth-child(25) {
+          grid-column-start: 12;
           grid-column-end: 15;
           grid-row-start: 2;
           background: #1D1C21;    
         }
-        &:nth-child(27) {
+        &:nth-child(26) {
           grid-column-start: 2;
           grid-column-end: 4;
           background: #1D1C21;
         }
-        &:nth-child(38) {
+        &:nth-child(37) {
           grid-row-start: 4;
           grid-column-start: 5;
           grid-column-end: 11;
@@ -83,6 +83,16 @@ img {
       position: relative;
       &:not(:last-child) {
         margin-bottom: 15px;
+      }
+      &-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+        }
       }
     }
     &-input {

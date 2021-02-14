@@ -413,20 +413,20 @@ img {
   background: #1D1C21;
 }
 
-.wrapper__keyboard-list-item:nth-child(26) {
-  grid-column-start: 13;
+.wrapper__keyboard-list-item:nth-child(25) {
+  grid-column-start: 12;
   grid-column-end: 15;
   grid-row-start: 2;
   background: #1D1C21;
 }
 
-.wrapper__keyboard-list-item:nth-child(27) {
+.wrapper__keyboard-list-item:nth-child(26) {
   grid-column-start: 2;
   grid-column-end: 4;
   background: #1D1C21;
 }
 
-.wrapper__keyboard-list-item:nth-child(38) {
+.wrapper__keyboard-list-item:nth-child(37) {
   grid-row-start: 4;
   grid-column-start: 5;
   grid-column-end: 11;
@@ -453,6 +453,22 @@ img {
 
 .wrapper__text-block:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.wrapper__text-block-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper__text-block-btns button:not(:last-child) {
+  margin-right: 16px;
 }
 
 .wrapper__text-input {

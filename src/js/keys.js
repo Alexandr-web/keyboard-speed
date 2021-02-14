@@ -84,10 +84,6 @@ export default [
     code: 75
   },
   {
-    val: 'д',
-    code: 76
-  },
-  {
     val: 'ж',
     code: 186
   },
