@@ -33,6 +33,7 @@ img {
   padding: 50px 0 0 0;
   &__keyboard {
     height: 300px;
+    padding: 25px 0;
     &-list {
       height: 100%;
       display: grid;
@@ -120,7 +121,8 @@ img {
       &-repeat {
         top: 0;
         bottom: 0;
-        margin: auto 0;
+        left: 0;
+        margin: auto;
         right: 10px;
         position: absolute;
         border: none;

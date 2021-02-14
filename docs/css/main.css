@@ -377,6 +377,7 @@ img {
 
 .wrapper__keyboard {
   height: 300px;
+  padding: 25px 0;
 }
 
 .wrapper__keyboard-list {
@@ -507,7 +508,8 @@ img {
 .wrapper__text-btn-repeat {
   top: 0;
   bottom: 0;
-  margin: auto 0;
+  left: 0;
+  margin: auto;
   right: 10px;
   position: absolute;
   border: none;
